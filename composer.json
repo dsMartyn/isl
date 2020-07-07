@@ -1,0 +1,169 @@
+{
+  "name": "roots/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "homepage": "https://roots.io/bedrock/",
+  "authors": [
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    }
+  ],
+  "keywords": [
+    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/bedrock/issues",
+    "forum": "https://discourse.roots.io/category/bedrock"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "lesniak-swann/advanced-custom-fields-pro",
+        "version": "5.8.9",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://wp-packagist.lsweb.co.uk/get/lesniak-swann-advanced-custom-fields-pro-5.8.9.zip"
+        },
+        "require" : {
+          "composer/installers": "v1.7"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "lesniak-swann/gravity-forms",
+        "version": "2.4.17.17",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://wp-packagist.lsweb.co.uk/get/lesniak-swann-gravity-forms-2.4.17.17.zip"
+        },
+        "require" : {
+          "composer/installers": "v1.7"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "lesniak-swann/js_composer",
+        "version": "6.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://wp-packagist.lsweb.co.uk/get/lesniak-swann-visual-composer-6.1.zip"
+        },
+        "require" : {
+          "composer/installers": "v1.7"
+        }
+      }
+    },
+    {
+	  "type": "package",
+	  "package": {
+	    "name": "lesniak-swann/gravityformshubspot",
+	    "version": "1.2.2",
+	    "type": "wordpress-plugin",
+	    "dist": {
+	      "type": "zip",
+	      "url": "https://wp-packagist.lsweb.co.uk/get/lesniak-swann-gravityformshubspot-1.2.2.zip"
+	    },
+	    "require" : {
+	      "composer/installers": "v1.7"
+	    }
+	  }
+	}
+  ],
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "^1.7",
+    "lesniak-swann/advanced-custom-fields-pro": "5.8.9",
+    "lesniak-swann/gravity-forms": "2.4.17.17",
+    "lesniak-swann/gravityformshubspot": "1.2.2",
+    "lesniak-swann/js_composer": "6.1",
+    "oscarotero/env": "^1.2.0",
+    "roots/soil": "*",
+    "roots/wordpress": "5.4",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "vlucas/phpdotenv": "^3.4.0",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "*",
+    "wpackagist-plugin/add-to-any": "^1.7",
+    "wpackagist-plugin/classic-editor": "*",
+    "wpackagist-plugin/cpt-onomies": "*",
+    "wpackagist-plugin/custom-post-type-ui": "*",
+    "wpackagist-plugin/duplicate-post": "*",
+    "wpackagist-plugin/ewww-image-optimizer": "*",
+    "wpackagist-plugin/gf-form-multicolumn": "*",
+    "wpackagist-plugin/regenerate-thumbnails": "*",
+    "wpackagist-plugin/safe-svg": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/wp-mail-smtp": "^1.8",
+    "wpackagist-plugin/wp-optimize": "*",
+    "wpackagist-plugin/wp-security-hardening": "*"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.4.2",
+    "roave/security-advisories": "dev-master"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "roots/soil",
+        "lesniak-swann/advanced-custom-fields-pro",
+        "wpackagist-plugin/classic-editor",
+        "wpackagist-plugin/cpt-onomies",
+        "wpackagist-plugin/custom-post-type-ui",
+        "wpackagist-plugin/duplicate-post",
+        "wpackagist-plugin/regenerate-thumbnails",
+        "wpackagist-plugin/add-to-any"
+      ],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin",
+        "wpackagist-plugin/acf-content-analysis-for-yoast-seo",
+        "wpackagist-plugin/ewww-image-optimizer",
+        "lesniak-swann/gravity-forms",
+        "wpackagist-plugin/gf-form-multicolumn",
+        "lesniak-swann/js_composer",
+        "wpackagist-plugin/wordpress-seo",
+        "wpackagist-plugin/wp-optimize",
+        "wpackagist-plugin/safe-svg",
+        "lesniak-swann/gravityformshubspot",
+		"wpackagist-plugin/wp-security-hardening"
+	  ],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "test": [
+      "phpcs"
+    ]
+  }
+}

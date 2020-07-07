@@ -1,0 +1,39 @@
+.service-tile {
+  overflow: hidden;
+  min-height: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:hover {
+    .overlay {
+      opacity: 0.8;
+      background-color: theme-color('primary') !important;
+    }
+    .service-tile__title {
+      transform: translateY(-10px);
+    }
+    .service-tile__content {
+      transform: translateY(0);
+      max-height: inherit;
+    }
+  }
+  .overlay {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $steel;
+    opacity: 0.5;
+    transition: background-color 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  .position-relative {
+    z-index: 2;
+  }
+  .service-tile__title {
+    transition: transform 0.8s;
+  }
+  .service-tile__content {
+    overflow: hidden;
+    max-height: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, max-height 1s linear 0.2s, transform 0.8s;
+  }
+}

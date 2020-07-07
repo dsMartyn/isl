@@ -1,0 +1,10 @@
+path: web/wp
+server:
+  docroot: web
+
+@development:
+   ssh: vagrant@is.local/srv/www/is.local/current
+@staging:
+   ssh: web@is.lsweb.co.uk/srv/www/is.lsweb.co.uk/current
+@production:
+   ssh: web@www.invisible-systems.com/srv/www/www.invisible-systems.com/current

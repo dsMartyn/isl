@@ -1,0 +1,28 @@
+.deep-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include media-breakpoint-up(xl) {
+    min-height: 743px;
+  }
+  .overlay {
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .position-relative {
+    z-index: 2;
+  }
+  .deep-banner__title {
+    @include media-breakpoint-up(lg) {
+      font-size: 1.125rem;
+    }
+  }
+  .deep-banner__text {
+    max-width: 1200px;
+    font-size: 1.5rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 3.25rem;
+    }
+  }
+}

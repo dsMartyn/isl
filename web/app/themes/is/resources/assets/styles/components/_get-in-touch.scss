@@ -1,0 +1,129 @@
+.get-in-touch {
+  #gform_1, #gform_2, #gform_3 {
+    max-width: 730px;
+
+    #gform_fields_1, #gform_fields_2, #gform_fields_3 {
+      input, select, textarea {
+        border: 0;
+      }
+    }
+
+    .gform_footer {
+      #gform_submit_button_1, #gform_submit_button_2, #gform_submit_button_3 {
+        background: transparent;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .gform_wrapper {
+    .gfield_required {
+      color: #ffffff;
+    }
+  }
+}
+
+#gform_1, #gform_2, #gform_3 {
+  max-width: 730px;
+
+  #gform_fields_1, #gform_fields_2, #gform_fields_3 {
+    @extend .row;
+    > .gfield {
+      @extend .form-group;
+      @extend .col-sm-6;
+      @extend .my-1;
+
+      input, select, textarea {
+        width: 100%;
+        border-radius: 0;
+      }
+
+      select {
+        width: 99.7%;
+        margin-top: 12px;
+        padding-left: 12px;
+        padding-right: 26px;
+        appearance: none;
+        cursor: pointer;
+        background: #ffffff url(../images/arrow-down.png) no-repeat;
+        background: #ffffff url(../images/arrow-down.svg) no-repeat;
+        background-position: 98% center;
+      }
+
+      textarea {
+        margin-top: 12px;
+      }
+
+
+
+      &#field_1_8, &#field_2_7, &#field_3_8 {
+        @extend .col-12;
+      }
+
+      &#field_2_11 {
+        height: 0;
+      }
+    }
+  }
+
+  .gform_footer {
+    margin-top: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    #gform_submit_button_1, #gform_submit_button_2, #gform_submit_button_3 {
+      width: 100%;
+    }
+  }
+}
+#gform_2 {
+  .gfield {
+    label {
+      margin-top: 1rem;;
+      font-weight: normal;
+    }
+  }
+  input[type="file"] {
+    padding-top: 8px;
+    padding-left: 0 !important;
+  }
+}
+
+.get-in-touch-modal {
+  .modal-dialog {
+    max-width: 730px;
+  }
+  .get-in-touch {
+    @extend .px-6;
+  }
+}
+
+/* Annoyingly have to include gform hidden css for labels again */
+.modal {
+  .gform_wrapper .hidden_label .gfield_label,
+  .gform_wrapper label.hidden_sub_label,
+  .gform_wrapper label.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+  .gform_wrapper li.hidden_label input {
+    margin-top: 12px;
+  }
+  .gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container input[type=text],
+  .gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container select {
+    margin-bottom: 12px;
+  }
+  .gform_wrapper .left_label li.hidden_label input,
+  .gform_wrapper .right_label li.hidden_label input {
+    margin-left: 3.7%;
+  }
+  .gform_wrapper .hidden_label input.large,
+  .gform_wrapper .hidden_label select.large,
+  .gform_wrapper .top_label input.large,
+  .gform_wrapper .top_label select.large {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+body.single-career {
+  article.type-career {
+    p, li {
+      font-size: 18px;
+    }
+    .text-primary.text-uppercase {
+      font-size: 15px;
+    }
+  }
+}
+
+.career-location {
+  ul {
+    padding-left: 0;
+  }
+}
+
+.careers-header-max-width {
+  max-width: 924px;
+}
+
+.career-teaser-post {
+  &:first-child {
+    border-top: 0 !important;
+  }
+  .row {
+    > * {
+      &:first-child {
+        > * {
+          @include media-breakpoint-up(lg) {
+            max-width: 450px;
+          }
+        }
+
+        hr {
+          max-width: 334px;
+        }
+      }
+    }
+  }
+  p, a {
+    @include media-breakpoint-up(lg) {
+      font-size: 18px;
+    }
+  }
+}

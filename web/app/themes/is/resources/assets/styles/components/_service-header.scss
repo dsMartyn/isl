@@ -1,0 +1,16 @@
+.service-header__intro {
+  @include media-breakpoint-up(lg) {
+    max-width: 70%;
+  }
+}
+
+.service-header__image img {
+  @include media-breakpoint-up(xl) {
+    max-width: 85%;
+    margin-bottom: -30%;
+  }
+}
+
+.service-header__image__chevron {
+  bottom: -62%;
+}

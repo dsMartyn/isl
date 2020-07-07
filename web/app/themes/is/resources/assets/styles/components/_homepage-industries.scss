@@ -1,0 +1,14 @@
+.homepage-industries {
+  .container {
+    max-width: 1500px;
+  }
+  .row {
+    .col-sm-6 {
+      max-width: 100%;
+      flex: 1;
+    }
+  }
+  .slick-slide[aria-hidden="true"] {
+    opacity: .5;
+  }
+}

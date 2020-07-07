@@ -1,0 +1,14 @@
+.service-tabs {
+  @include media-breakpoint-up(xl) {
+    padding-top: 27rem !important;
+  }
+  .nav-pills {
+    .nav-link {
+      &.active {
+        background-color: transparent;
+        color: theme-color('primary');
+        border-width: 2px !important;
+      }
+    }
+  }
+}

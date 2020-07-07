@@ -1,0 +1,269 @@
+footer {
+  .textwidget {
+    .add-more {
+      padding-left: 0;
+    }
+    .list-inline {
+      li {
+        display: inline;
+        @extend .mr-2;
+      }
+    }
+  }
+}
+
+.footer {
+  background: $regtext;
+  color: #fff;
+  margin: 2rem 0 0 0;
+  padding: 3rem 0 4rem 0;
+  font-size: 0.9rem;
+
+  .footer-nav {
+    margin: 0 0 3rem 0;
+    border-bottom: 1px solid $green;
+
+    ul {
+      margin: 0 0 2rem 0;
+      list-style: none;
+      padding: 0;
+
+      li {
+        line-height: 1.1rem;
+        margin: 0 0 1rem 0;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            color: $green;
+            text-decoration: none;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .footer-info {
+    font-size: 0.75rem;
+
+    .footer-email {
+      font-size: 0.9rem;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          color: $green;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .footer-separator {
+      display: inline;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    .footer-break {
+      display: none;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+    }
+  }
+
+  .footer-terms {
+    font-size: 0.75rem;
+    text-align: right;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: $green;
+        text-decoration: none;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      text-align: left;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+
+      @include media-breakpoint-down(lg) {
+        margin: 0 0 1rem 0;
+      }
+
+      li {
+        display: inline;
+        padding: 0 0 0 0.25rem;
+
+        /*
+        @include media-breakpoint-down(sm) {
+          display: block;
+          padding: 0;
+        }
+        */
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            color: $green;
+            text-decoration: none;
+          }
+        }
+
+        &::after {
+          display: inline;
+          content: "|";
+          margin-left: 0.5rem;
+
+          /*
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+          */
+        }
+
+        &:last-child {
+          padding-right: 0;
+
+          &::after {
+            display: none;
+            margin: 0;
+          }
+        }
+
+        &:first-child {
+          @include media-breakpoint-down(lg) {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#font__size--1 {
+  .footer-info-terms {
+    .col-12 {
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100% !important;
+
+      .footer-terms {
+        text-align: left;
+
+        ul {
+          margin: 0 0 1rem 0;
+
+          li {
+            &:first-child {
+              padding: 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+              padding: 0;
+              display: block;
+
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-info {
+        .footer-separator {
+          display: inline;
+
+          @include media-breakpoint-down(lg) {
+            display: none;
+          }
+        }
+
+        .footer-break {
+          display: none;
+
+          @include media-breakpoint-down(lg) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+#font__size--2 {
+  .footer-info-terms {
+    .col-12 {
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100% !important;
+
+      .footer-terms {
+        text-align: left;
+
+        ul {
+          margin: 0 0 1rem 0;
+
+          li {
+            &:first-child {
+              padding: 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+              padding: 0;
+              display: block;
+
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-info {
+        .footer-separator {
+          display: inline;
+
+          @include media-breakpoint-down(lg) {
+            display: none;
+          }
+        }
+
+        .footer-break {
+          display: none;
+
+          @include media-breakpoint-down(lg) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

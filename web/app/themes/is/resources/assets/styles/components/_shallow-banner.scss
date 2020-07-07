@@ -1,0 +1,26 @@
+.shallow-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .overlay {
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .position-relative {
+    z-index: 2;
+  }
+  .shallow-banner__title {
+    @include media-breakpoint-up(lg) {
+      font-size: 70px;
+    }
+  }
+  .shallow-banner__text {
+    max-width: 838px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.case-studies {
+  .slick-dots {
+    @include media-breakpoint-up(lg) {
+      width: auto;
+      right: 17%;
+      bottom: 3%;
+    }
+    li {
+      button {
+        &:before {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.case-studies__slider--slide {
+  position: relative;
+  img.wp-post-image {
+    @include media-breakpoint-up(xxxl) {
+      width: 956px;
+      height: auto;
+      // @supports (object-fit: cover) {
+      //   object-fit: cover;
+      //   height: 736px;
+      // }
+    }
+  }
+}
+
+.case-studies__slider__content {
+  max-width: 590px;
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    top: 13%;
+    right: 0;
+  }
+}
+
+.case-studies__slider--arrows {
+  @include media-breakpoint-up(xxl) {
+    position: absolute;
+    right: 10%;
+    bottom: -3%;
+  }
+  @include media-breakpoint-up(xxxl) {
+    bottom: 0%;
+  }
+  > * {
+    cursor: pointer;
+  }
+}
+
+.case-studies__pageinfo {
+  font-size: 18px;
+}
+
+.case-studies-block {
+  .service-tile {
+    @include media-breakpoint-up(md) {
+      min-height: 388px;
+    }
+  }
+}
+
+body.single-case_studies, body.single-post {
+  .type-case_studies, .type-post {
+    position: relative;
+    .case-study-background-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 558px;
+    }
+    .entry-title {
+      @include media-breakpoint-up(xl) {
+        font-size: 52px;
+      }
+    }
+    .post-thumbnail {
+      img {
+        height: auto;
+      }
+    }
+    .case-study-quote {
+      position: relative;
+      z-index: 999;
+      @include media-breakpoint-up(md) {
+        width: 125%;
+        margin-left: -14rem;
+      }
+    }
+    .case-study-content-middle-images {
+      max-width: 906px;
+      @include media-breakpoint-up(md) {
+        margin-left: -14rem;
+      }
+    }
+
+    .case-study-aside {
+      @include media-breakpoint-up(lg) {
+        margin-top: 17%;
+      }
+    }
+  }
+}
+
+.case-study--max-width {
+  max-width: 688px;
+}
+
+.case-studies-archive-tile {
+  @include media-breakpoint-up(xl) {
+    min-height: 440px;
+  }
+  .overlay {
+    background-color: transparent;
+  }
+}
+
+.archive-case-studies-featured__content {
+  @extend .reasons-to-choose-us__slider__content;
+}

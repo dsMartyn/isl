@@ -1,0 +1,15 @@
+.breadcrumbs {
+  padding: 2rem 0 2rem 0;
+  font-size: 0.75rem;
+  color: $grey;
+
+  a {
+    color: $grey;
+    text-decoration: none;
+
+    &:hover {
+      color: $grey;
+      text-decoration: underline;
+    }
+  }
+}
